@@ -647,7 +647,7 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="w-full bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8 animate-fade-in" style={{ animationDelay: "0.9s" }}>
+      <footer className="w-full bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8 animate-fade-in" style={{ animationDelay: "0.9s" }} ref={finalCtaRef.ref}>
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             {/* Brand */}
