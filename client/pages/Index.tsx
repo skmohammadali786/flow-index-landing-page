@@ -545,7 +545,7 @@ export default function Index() {
       </section>
 
       {/* Privacy & Personalization */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white animate-slide-up" style={{ animationDelay: "0.7s" }}>
+      <section ref={privacyRef.ref} className={`w-full py-20 px-4 sm:px-6 lg:px-8 bg-white ${privacyRef.isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: "0.7s" }}>
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12 animate-slide-up" style={{ animationDelay: "0.8s" }}>
