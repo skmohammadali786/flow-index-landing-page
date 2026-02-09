@@ -234,7 +234,7 @@ export default function Index() {
       {/* Health & Wellness Logging */}
       <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-50 to-white animate-slide-up" style={{ animationDelay: "0.2s" }}>
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-slide-up" style={{ animationDelay: "0.3s" }}>
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               Health & Wellness Logging
             </h2>
@@ -287,7 +287,7 @@ export default function Index() {
       {/* Smart Insights & Analytics */}
       <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white animate-slide-up" style={{ animationDelay: "0.3s" }}>
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-slide-up" style={{ animationDelay: "0.4s" }}>
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               Smart Insights & Analytics
             </h2>
@@ -341,7 +341,7 @@ export default function Index() {
       <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 animate-slide-up" style={{ animationDelay: "0.4s" }}>
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-center mb-12 animate-slide-up" style={{ animationDelay: "0.5s" }}>
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
                 Cognitive Performance Forecast
               </h2>
@@ -424,7 +424,7 @@ export default function Index() {
       {/* Clinical-Grade Support */}
       <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white animate-slide-up" style={{ animationDelay: "0.5s" }}>
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-slide-up" style={{ animationDelay: "0.6s" }}>
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               Clinical-Grade Support
             </h2>
@@ -477,7 +477,7 @@ export default function Index() {
       {/* Partner Sharing */}
       <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-pink-50 to-white animate-slide-up" style={{ animationDelay: "0.6s" }}>
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-slide-up" style={{ animationDelay: "0.7s" }}>
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               Partner Sharing
             </h2>
@@ -538,7 +538,7 @@ export default function Index() {
       <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white animate-slide-up" style={{ animationDelay: "0.7s" }}>
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-center mb-12 animate-slide-up" style={{ animationDelay: "0.8s" }}>
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
                 Privacy & Personalization
               </h2>
