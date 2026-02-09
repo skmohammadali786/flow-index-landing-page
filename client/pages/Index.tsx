@@ -485,7 +485,7 @@ export default function Index() {
       </section>
 
       {/* Partner Sharing */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-pink-50 to-white animate-slide-up" style={{ animationDelay: "0.6s" }}>
+      <section ref={partnerRef.ref} className={`w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-pink-50 to-white ${partnerRef.isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: "0.6s" }}>
         <div className="container mx-auto">
           <div className="text-center mb-16 animate-slide-up" style={{ animationDelay: "0.7s" }}>
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
