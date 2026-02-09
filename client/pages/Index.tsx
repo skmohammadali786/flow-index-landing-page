@@ -317,15 +317,16 @@ export default function Index() {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-2xl bg-gradient-to-br from-lavender/20 to-transparent border-2 border-purple-200 hover:shadow-lg transition-all group"
+                className="p-8 rounded-2xl bg-gradient-to-br from-lavender/20 to-transparent border-2 border-purple-200 hover:border-purple-400 hover:shadow-2xl hover:scale-105 transition-all group animate-bounce-in"
+                style={{ animationDelay: `${idx * 0.15}s` }}
               >
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-400 to-blue-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-400 to-blue-400 flex items-center justify-center mb-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors">
                   {feature.description}
                 </p>
               </div>
