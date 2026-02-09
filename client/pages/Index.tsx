@@ -348,7 +348,7 @@ export default function Index() {
       </section>
 
       {/* Cognitive Performance Forecast */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 animate-slide-up" style={{ animationDelay: "0.4s" }}>
+      <section ref={cognitiveRef.ref} className={`w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 ${cognitiveRef.isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: "0.4s" }}>
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12 animate-slide-up" style={{ animationDelay: "0.5s" }}>
