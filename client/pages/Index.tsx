@@ -35,7 +35,10 @@ export default function Index() {
       <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-pink-50 to-purple-50 pt-20 pb-20">
         {/* Decorative gradient orbs */}
         <div className="absolute top-20 right-10 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
-        <div className="absolute bottom-20 left-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{ animationDelay: "2s" }}></div>
+        <div
+          className="absolute bottom-20 left-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"
+          style={{ animationDelay: "2s" }}
+        ></div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text */}
@@ -52,7 +55,10 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            <div
+              className="flex flex-col sm:flex-row gap-4 animate-fade-in"
+              style={{ animationDelay: "0.4s" }}
+            >
               <a
                 href="https://flow-index-f7fdedcf.vercel.app/"
                 target="_blank"
@@ -82,7 +88,10 @@ export default function Index() {
               </a>
             </div>
 
-            <div className="flex items-center gap-6 text-sm text-gray-600 pt-4 animate-fade-in" style={{ animationDelay: "0.6s" }}>
+            <div
+              className="flex items-center gap-6 text-sm text-gray-600 pt-4 animate-fade-in"
+              style={{ animationDelay: "0.6s" }}
+            >
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-pink-500" />
                 <span>HIPAA Compliant</span>
@@ -95,7 +104,10 @@ export default function Index() {
           </div>
 
           {/* Right Column - Mobile Mockup */}
-          <div className="flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <div
+            className="flex justify-center lg:justify-end animate-fade-in"
+            style={{ animationDelay: "0.2s" }}
+          >
             <div className="relative w-72 h-full">
               {/* Phone Frame */}
               <div className="relative mx-auto w-72 h-96 bg-black rounded-3xl shadow-2xl overflow-hidden border-8 border-gray-900">
@@ -136,8 +148,7 @@ export default function Index() {
                           let bgColor = "bg-gray-50";
                           let dot = null;
 
-                          if (day >= 1 && day <= 5)
-                            bgColor = "bg-red-200";
+                          if (day >= 1 && day <= 5) bgColor = "bg-red-200";
                           else if (day >= 6 && day <= 13)
                             bgColor = "bg-purple-100";
                           else if (day >= 14 && day <= 16)
@@ -189,9 +200,16 @@ export default function Index() {
       </section>
 
       {/* Core Cycle Tracking Section */}
-      <section ref={coreTrackingRef.ref} className={`w-full py-20 px-4 sm:px-6 lg:px-8 bg-white ${coreTrackingRef.isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: "0.1s" }}>
+      <section
+        ref={coreTrackingRef.ref}
+        className={`w-full py-20 px-4 sm:px-6 lg:px-8 bg-white ${coreTrackingRef.isVisible ? "animate-slide-up" : "opacity-0"}`}
+        style={{ animationDelay: "0.1s" }}
+      >
         <div className="container mx-auto">
-          <div className="text-center mb-16 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+          <div
+            className="text-center mb-16 animate-slide-up"
+            style={{ animationDelay: "0.2s" }}
+          >
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 group-hover:text-pink-600 transition-colors">
               Core Cycle Tracking & Prediction
             </h2>
@@ -200,7 +218,9 @@ export default function Index() {
             </p>
           </div>
 
-          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ${coreTrackingRef.isVisible ? "opacity-100" : "opacity-0"}`}>
+          <div
+            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ${coreTrackingRef.isVisible ? "opacity-100" : "opacity-0"}`}
+          >
             {[
               {
                 icon: Calendar,
@@ -226,7 +246,11 @@ export default function Index() {
               <div
                 key={idx}
                 className={`p-6 rounded-2xl bg-gradient-to-br from-pink-50 to-purple-50 hover:shadow-2xl hover:scale-105 transition-all border border-pink-200 hover:border-pink-400 group ${coreTrackingRef.isVisible ? "animate-bounce-in" : "opacity-0"}`}
-                style={{ animationDelay: coreTrackingRef.isVisible ? `${idx * 0.1}s` : undefined }}
+                style={{
+                  animationDelay: coreTrackingRef.isVisible
+                    ? `${idx * 0.1}s`
+                    : undefined,
+                }}
               >
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-pink-400 to-purple-400 flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
@@ -234,7 +258,9 @@ export default function Index() {
                 <h3 className="font-bold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-gray-700 text-sm group-hover:text-gray-900 transition-colors">{feature.description}</p>
+                <p className="text-gray-700 text-sm group-hover:text-gray-900 transition-colors">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -242,9 +268,16 @@ export default function Index() {
       </section>
 
       {/* Health & Wellness Logging */}
-      <section ref={healthWellnessRef.ref} className={`w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-50 to-white ${healthWellnessRef.isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: "0.2s" }}>
+      <section
+        ref={healthWellnessRef.ref}
+        className={`w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-50 to-white ${healthWellnessRef.isVisible ? "animate-slide-up" : "opacity-0"}`}
+        style={{ animationDelay: "0.2s" }}
+      >
         <div className="container mx-auto">
-          <div className="text-center mb-16 animate-slide-up" style={{ animationDelay: "0.3s" }}>
+          <div
+            className="text-center mb-16 animate-slide-up"
+            style={{ animationDelay: "0.3s" }}
+          >
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               Health & Wellness Logging
             </h2>
@@ -253,7 +286,9 @@ export default function Index() {
             </p>
           </div>
 
-          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ${healthWellnessRef.isVisible ? "opacity-100" : "opacity-0"}`}>
+          <div
+            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ${healthWellnessRef.isVisible ? "opacity-100" : "opacity-0"}`}
+          >
             {[
               {
                 icon: Sparkles,
@@ -279,7 +314,11 @@ export default function Index() {
               <div
                 key={idx}
                 className={`p-6 rounded-2xl bg-white border-2 border-peach hover:border-pink-400 hover:shadow-2xl hover:scale-105 transition-all group ${healthWellnessRef.isVisible ? "animate-bounce-in" : "opacity-0"}`}
-                style={{ animationDelay: healthWellnessRef.isVisible ? `${idx * 0.1}s` : undefined }}
+                style={{
+                  animationDelay: healthWellnessRef.isVisible
+                    ? `${idx * 0.1}s`
+                    : undefined,
+                }}
               >
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-peach to-pink-300 flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
@@ -287,7 +326,9 @@ export default function Index() {
                 <h3 className="font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-gray-700 text-sm group-hover:text-gray-900 transition-colors">{feature.description}</p>
+                <p className="text-gray-700 text-sm group-hover:text-gray-900 transition-colors">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -295,9 +336,16 @@ export default function Index() {
       </section>
 
       {/* Smart Insights & Analytics */}
-      <section ref={smartInsightsRef.ref} className={`w-full py-20 px-4 sm:px-6 lg:px-8 bg-white ${smartInsightsRef.isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: "0.3s" }}>
+      <section
+        ref={smartInsightsRef.ref}
+        className={`w-full py-20 px-4 sm:px-6 lg:px-8 bg-white ${smartInsightsRef.isVisible ? "animate-slide-up" : "opacity-0"}`}
+        style={{ animationDelay: "0.3s" }}
+      >
         <div className="container mx-auto">
-          <div className="text-center mb-16 animate-slide-up" style={{ animationDelay: "0.4s" }}>
+          <div
+            className="text-center mb-16 animate-slide-up"
+            style={{ animationDelay: "0.4s" }}
+          >
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               Smart Insights & Analytics
             </h2>
@@ -306,7 +354,9 @@ export default function Index() {
             </p>
           </div>
 
-          <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 ${smartInsightsRef.isVisible ? "opacity-100" : "opacity-0"}`}>
+          <div
+            className={`grid grid-cols-1 md:grid-cols-3 gap-8 ${smartInsightsRef.isVisible ? "opacity-100" : "opacity-0"}`}
+          >
             {[
               {
                 icon: BarChart3,
@@ -330,7 +380,11 @@ export default function Index() {
               <div
                 key={idx}
                 className={`p-8 rounded-2xl bg-gradient-to-br from-lavender/20 to-transparent border-2 border-purple-200 hover:border-purple-400 hover:shadow-2xl hover:scale-105 transition-all group ${smartInsightsRef.isVisible ? "animate-bounce-in" : "opacity-0"}`}
-                style={{ animationDelay: smartInsightsRef.isVisible ? `${idx * 0.15}s` : undefined }}
+                style={{
+                  animationDelay: smartInsightsRef.isVisible
+                    ? `${idx * 0.15}s`
+                    : undefined,
+                }}
               >
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-400 to-blue-400 flex items-center justify-center mb-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300">
                   <feature.icon className="w-8 h-8 text-white" />
@@ -348,10 +402,17 @@ export default function Index() {
       </section>
 
       {/* Cognitive Performance Forecast */}
-      <section ref={cognitiveRef.ref} className={`w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 ${cognitiveRef.isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: "0.4s" }}>
+      <section
+        ref={cognitiveRef.ref}
+        className={`w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 ${cognitiveRef.isVisible ? "animate-slide-up" : "opacity-0"}`}
+        style={{ animationDelay: "0.4s" }}
+      >
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12 animate-slide-up" style={{ animationDelay: "0.5s" }}>
+            <div
+              className="text-center mb-12 animate-slide-up"
+              style={{ animationDelay: "0.5s" }}
+            >
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
                 Cognitive Performance Forecast
               </h2>
@@ -432,9 +493,16 @@ export default function Index() {
       </section>
 
       {/* Clinical-Grade Support */}
-      <section ref={clinicalRef.ref} className={`w-full py-20 px-4 sm:px-6 lg:px-8 bg-white ${clinicalRef.isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: "0.5s" }}>
+      <section
+        ref={clinicalRef.ref}
+        className={`w-full py-20 px-4 sm:px-6 lg:px-8 bg-white ${clinicalRef.isVisible ? "animate-slide-up" : "opacity-0"}`}
+        style={{ animationDelay: "0.5s" }}
+      >
         <div className="container mx-auto">
-          <div className="text-center mb-16 animate-slide-up" style={{ animationDelay: "0.6s" }}>
+          <div
+            className="text-center mb-16 animate-slide-up"
+            style={{ animationDelay: "0.6s" }}
+          >
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               Clinical-Grade Support
             </h2>
@@ -443,7 +511,9 @@ export default function Index() {
             </p>
           </div>
 
-          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ${clinicalRef.isVisible ? "opacity-100" : "opacity-0"}`}>
+          <div
+            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ${clinicalRef.isVisible ? "opacity-100" : "opacity-0"}`}
+          >
             {[
               {
                 icon: Shield,
@@ -458,7 +528,8 @@ export default function Index() {
               {
                 icon: BarChart3,
                 title: "Doctor-Ready Reports",
-                description: "Export data in formats your physician understands",
+                description:
+                  "Export data in formats your physician understands",
               },
               {
                 icon: CheckCircle2,
@@ -469,7 +540,11 @@ export default function Index() {
               <div
                 key={idx}
                 className={`p-6 rounded-2xl bg-gradient-to-br from-green-50 to-teal-50 hover:shadow-2xl hover:scale-105 transition-all border border-green-200 hover:border-green-400 group ${clinicalRef.isVisible ? "animate-bounce-in" : "opacity-0"}`}
-                style={{ animationDelay: clinicalRef.isVisible ? `${idx * 0.1}s` : undefined }}
+                style={{
+                  animationDelay: clinicalRef.isVisible
+                    ? `${idx * 0.1}s`
+                    : undefined,
+                }}
               >
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
@@ -477,7 +552,9 @@ export default function Index() {
                 <h3 className="font-bold text-gray-900 mb-2 group-hover:text-green-700 transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-gray-700 text-sm group-hover:text-gray-900 transition-colors">{feature.description}</p>
+                <p className="text-gray-700 text-sm group-hover:text-gray-900 transition-colors">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -485,9 +562,16 @@ export default function Index() {
       </section>
 
       {/* Partner Sharing */}
-      <section ref={partnerRef.ref} className={`w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-pink-50 to-white ${partnerRef.isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: "0.6s" }}>
+      <section
+        ref={partnerRef.ref}
+        className={`w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-pink-50 to-white ${partnerRef.isVisible ? "animate-slide-up" : "opacity-0"}`}
+        style={{ animationDelay: "0.6s" }}
+      >
         <div className="container mx-auto">
-          <div className="text-center mb-16 animate-slide-up" style={{ animationDelay: "0.7s" }}>
+          <div
+            className="text-center mb-16 animate-slide-up"
+            style={{ animationDelay: "0.7s" }}
+          >
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               Partner Sharing
             </h2>
@@ -508,7 +592,10 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 border-2 border-rose-200 hover:border-rose-400 hover:shadow-2xl hover:scale-105 transition-all group animate-bounce-in" style={{ animationDelay: "0.1s" }}>
+            <div
+              className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 border-2 border-rose-200 hover:border-rose-400 hover:shadow-2xl hover:scale-105 transition-all group animate-bounce-in"
+              style={{ animationDelay: "0.1s" }}
+            >
               <Heart className="w-12 h-12 text-rose-500 mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" />
               <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors">
                 Care Suggestions
@@ -519,18 +606,24 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 border-2 border-rose-200 hover:border-rose-400 hover:shadow-2xl hover:scale-105 transition-all group animate-bounce-in" style={{ animationDelay: "0.2s" }}>
+            <div
+              className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 border-2 border-rose-200 hover:border-rose-400 hover:shadow-2xl hover:scale-105 transition-all group animate-bounce-in"
+              style={{ animationDelay: "0.2s" }}
+            >
               <Lock className="w-12 h-12 text-rose-500 mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" />
               <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors">
                 Privacy Controls
               </h3>
               <p className="text-gray-700 group-hover:text-gray-900 transition-colors">
-                You control exactly what information is shared and with whom,
-                at all times.
+                You control exactly what information is shared and with whom, at
+                all times.
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 border-2 border-rose-200 hover:border-rose-400 hover:shadow-2xl hover:scale-105 transition-all group animate-bounce-in" style={{ animationDelay: "0.3s" }}>
+            <div
+              className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 border-2 border-rose-200 hover:border-rose-400 hover:shadow-2xl hover:scale-105 transition-all group animate-bounce-in"
+              style={{ animationDelay: "0.3s" }}
+            >
               <BarChart3 className="w-12 h-12 text-rose-500 mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" />
               <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors">
                 Shareable Reports
@@ -545,10 +638,17 @@ export default function Index() {
       </section>
 
       {/* Privacy & Personalization */}
-      <section ref={privacyRef.ref} className={`w-full py-20 px-4 sm:px-6 lg:px-8 bg-white ${privacyRef.isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: "0.7s" }}>
+      <section
+        ref={privacyRef.ref}
+        className={`w-full py-20 px-4 sm:px-6 lg:px-8 bg-white ${privacyRef.isVisible ? "animate-slide-up" : "opacity-0"}`}
+        style={{ animationDelay: "0.7s" }}
+      >
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12 animate-slide-up" style={{ animationDelay: "0.8s" }}>
+            <div
+              className="text-center mb-12 animate-slide-up"
+              style={{ animationDelay: "0.8s" }}
+            >
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
                 Privacy & Personalization
               </h2>
@@ -593,7 +693,9 @@ export default function Index() {
                   <h3 className="font-bold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-700 text-sm group-hover:text-gray-900 transition-colors">{feature.description}</p>
+                  <p className="text-gray-700 text-sm group-hover:text-gray-900 transition-colors">
+                    {feature.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -602,8 +704,15 @@ export default function Index() {
       </section>
 
       {/* Final CTA Section */}
-      <section ref={finalCtaRef.ref} className={`w-full py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100 ${finalCtaRef.isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: "0.8s" }}>
-        <div className="container mx-auto text-center animate-slide-up" style={{ animationDelay: "0.9s" }}>
+      <section
+        ref={finalCtaRef.ref}
+        className={`w-full py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100 ${finalCtaRef.isVisible ? "animate-slide-up" : "opacity-0"}`}
+        style={{ animationDelay: "0.8s" }}
+      >
+        <div
+          className="container mx-auto text-center animate-slide-up"
+          style={{ animationDelay: "0.9s" }}
+        >
           <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-8">
             Start understanding your cycle today.
           </h2>
@@ -647,7 +756,11 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="w-full bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8 animate-fade-in" style={{ animationDelay: "0.9s" }} ref={finalCtaRef.ref}>
+      <footer
+        className="w-full bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8 animate-fade-in"
+        style={{ animationDelay: "0.9s" }}
+        ref={finalCtaRef.ref}
+      >
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             {/* Brand */}
@@ -663,26 +776,17 @@ export default function Index() {
               <h4 className="font-semibold mb-4">Product</h4>
               <ul className="space-y-2 text-gray-400">
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-white transition-colors"
-                  >
+                  <a href="#" className="hover:text-white transition-colors">
                     Features
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-white transition-colors"
-                  >
+                  <a href="#" className="hover:text-white transition-colors">
                     Pricing
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-white transition-colors"
-                  >
+                  <a href="#" className="hover:text-white transition-colors">
                     Security
                   </a>
                 </li>
@@ -693,26 +797,17 @@ export default function Index() {
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-gray-400">
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-white transition-colors"
-                  >
+                  <a href="#" className="hover:text-white transition-colors">
                     About
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-white transition-colors"
-                  >
+                  <a href="#" className="hover:text-white transition-colors">
                     Blog
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-white transition-colors"
-                  >
+                  <a href="#" className="hover:text-white transition-colors">
                     Contact
                   </a>
                 </li>
@@ -723,18 +818,12 @@ export default function Index() {
               <h4 className="font-semibold mb-4">Legal</h4>
               <ul className="space-y-2 text-gray-400">
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-white transition-colors"
-                  >
+                  <a href="#" className="hover:text-white transition-colors">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-white transition-colors"
-                  >
+                  <a href="#" className="hover:text-white transition-colors">
                     Terms of Service
                   </a>
                 </li>

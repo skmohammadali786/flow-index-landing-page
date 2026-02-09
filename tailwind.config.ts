@@ -58,10 +58,10 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         // Wellness palette colors
-        "blush": "hsl(var(--blush))",
-        "peach": "hsl(var(--peach))",
-        "lavender": "hsl(var(--lavender))",
-        "sage": "hsl(var(--sage))",
+        blush: "hsl(var(--blush))",
+        peach: "hsl(var(--peach))",
+        lavender: "hsl(var(--lavender))",
+        sage: "hsl(var(--sage))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -103,7 +103,7 @@ export default {
             transform: "translateY(0)",
           },
         },
-        "float": {
+        float: {
           "0%, 100%": {
             transform: "translateY(0px)",
           },
@@ -124,7 +124,7 @@ export default {
             transform: "scale(1) translateY(0)",
           },
         },
-        "glow": {
+        glow: {
           "0%, 100%": {
             boxShadow: "0 0 5px rgba(236, 72, 153, 0.3)",
           },
@@ -132,7 +132,7 @@ export default {
             boxShadow: "0 0 20px rgba(236, 72, 153, 0.6)",
           },
         },
-        "shimmer": {
+        shimmer: {
           "0%": {
             backgroundPosition: "-1000px 0",
           },
@@ -154,10 +154,10 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out",
         "slide-up": "slide-up 0.6s ease-out",
-        "float": "float 6s ease-in-out infinite",
+        float: "float 6s ease-in-out infinite",
         "bounce-in": "bounce-in 0.7s cubic-bezier(0.34, 1.56, 0.64, 1)",
-        "glow": "glow 3s ease-in-out infinite",
-        "shimmer": "shimmer 2s infinite",
+        glow: "glow 3s ease-in-out infinite",
+        shimmer: "shimmer 2s infinite",
         "pulse-slow": "pulse-slow 3s ease-in-out infinite",
       },
     },
