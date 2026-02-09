@@ -242,7 +242,7 @@ export default function Index() {
       </section>
 
       {/* Health & Wellness Logging */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-50 to-white animate-slide-up" style={{ animationDelay: "0.2s" }}>
+      <section ref={healthWellnessRef.ref} className={`w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-50 to-white ${healthWellnessRef.isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: "0.2s" }}>
         <div className="container mx-auto">
           <div className="text-center mb-16 animate-slide-up" style={{ animationDelay: "0.3s" }}>
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
