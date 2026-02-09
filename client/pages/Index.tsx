@@ -20,6 +20,15 @@ import {
 } from "lucide-react";
 
 export default function Index() {
+  const coreTrackingRef = useScrollAnimation();
+  const healthWellnessRef = useScrollAnimation();
+  const smartInsightsRef = useScrollAnimation();
+  const cognitiveRef = useScrollAnimation();
+  const clinicalRef = useScrollAnimation();
+  const partnerRef = useScrollAnimation();
+  const privacyRef = useScrollAnimation();
+  const finalCtaRef = useScrollAnimation();
+
   return (
     <div className="w-full bg-white">
       {/* Hero Section */}
