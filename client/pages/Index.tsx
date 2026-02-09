@@ -189,7 +189,7 @@ export default function Index() {
       </section>
 
       {/* Core Cycle Tracking Section */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white animate-slide-up" style={{ animationDelay: "0.1s" }}>
+      <section ref={coreTrackingRef.ref} className={`w-full py-20 px-4 sm:px-6 lg:px-8 bg-white ${coreTrackingRef.isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: "0.1s" }}>
         <div className="container mx-auto">
           <div className="text-center mb-16 animate-slide-up" style={{ animationDelay: "0.2s" }}>
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 group-hover:text-pink-600 transition-colors">
