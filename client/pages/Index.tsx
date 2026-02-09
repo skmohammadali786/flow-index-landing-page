@@ -485,45 +485,45 @@ export default function Index() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 border-2 border-rose-200">
-              <Users className="w-12 h-12 text-rose-500 mb-4" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+            <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 border-2 border-rose-200 hover:border-rose-400 hover:shadow-2xl hover:scale-105 transition-all group animate-bounce-in">
+              <Users className="w-12 h-12 text-rose-500 mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" />
+              <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors">
                 Partner Dashboard
               </h3>
-              <p className="text-gray-700">
+              <p className="text-gray-700 group-hover:text-gray-900 transition-colors">
                 Share your cycle information with partners in a way that
                 promotes understanding and support.
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 border-2 border-rose-200">
-              <Heart className="w-12 h-12 text-rose-500 mb-4" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+            <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 border-2 border-rose-200 hover:border-rose-400 hover:shadow-2xl hover:scale-105 transition-all group animate-bounce-in" style={{ animationDelay: "0.1s" }}>
+              <Heart className="w-12 h-12 text-rose-500 mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" />
+              <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors">
                 Care Suggestions
               </h3>
-              <p className="text-gray-700">
+              <p className="text-gray-700 group-hover:text-gray-900 transition-colors">
                 Get thoughtful suggestions for partners on how best to support
                 you during different cycle phases.
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 border-2 border-rose-200">
-              <Lock className="w-12 h-12 text-rose-500 mb-4" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+            <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 border-2 border-rose-200 hover:border-rose-400 hover:shadow-2xl hover:scale-105 transition-all group animate-bounce-in" style={{ animationDelay: "0.2s" }}>
+              <Lock className="w-12 h-12 text-rose-500 mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" />
+              <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors">
                 Privacy Controls
               </h3>
-              <p className="text-gray-700">
+              <p className="text-gray-700 group-hover:text-gray-900 transition-colors">
                 You control exactly what information is shared and with whom,
                 at all times.
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 border-2 border-rose-200">
-              <BarChart3 className="w-12 h-12 text-rose-500 mb-4" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+            <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 border-2 border-rose-200 hover:border-rose-400 hover:shadow-2xl hover:scale-105 transition-all group animate-bounce-in" style={{ animationDelay: "0.3s" }}>
+              <BarChart3 className="w-12 h-12 text-rose-500 mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" />
+              <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors">
                 Shareable Reports
               </h3>
-              <p className="text-gray-700">
+              <p className="text-gray-700 group-hover:text-gray-900 transition-colors">
                 Generate reports to share with healthcare providers or loved
                 ones.
               </p>
