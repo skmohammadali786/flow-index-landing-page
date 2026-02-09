@@ -177,7 +177,7 @@ export default function Index() {
       </section>
 
       {/* Core Cycle Tracking Section */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white animate-slide-up" style={{ animationDelay: "0.1s" }}>
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
@@ -229,7 +229,7 @@ export default function Index() {
       </section>
 
       {/* Health & Wellness Logging */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-50 to-white">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-50 to-white animate-slide-up" style={{ animationDelay: "0.2s" }}>
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
@@ -281,7 +281,7 @@ export default function Index() {
       </section>
 
       {/* Smart Insights & Analytics */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white animate-slide-up" style={{ animationDelay: "0.3s" }}>
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
@@ -333,7 +333,7 @@ export default function Index() {
       </section>
 
       {/* Cognitive Performance Forecast */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 animate-slide-up" style={{ animationDelay: "0.4s" }}>
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -417,7 +417,7 @@ export default function Index() {
       </section>
 
       {/* Clinical-Grade Support */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white animate-slide-up" style={{ animationDelay: "0.5s" }}>
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
@@ -469,7 +469,7 @@ export default function Index() {
       </section>
 
       {/* Partner Sharing */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-pink-50 to-white">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-pink-50 to-white animate-slide-up" style={{ animationDelay: "0.6s" }}>
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
@@ -529,7 +529,7 @@ export default function Index() {
       </section>
 
       {/* Privacy & Personalization */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white animate-slide-up" style={{ animationDelay: "0.7s" }}>
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -585,7 +585,7 @@ export default function Index() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="w-full py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100">
+      <section className="w-full py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100 animate-slide-up" style={{ animationDelay: "0.8s" }}>
         <div className="container mx-auto text-center">
           <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-8">
             Start understanding your cycle today.
@@ -596,13 +596,19 @@ export default function Index() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button
-              className="px-10 py-7 text-lg font-semibold bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all"
-              size="lg"
+            <a
+              href="https://flow-index-f7fdedcf.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Get Started
-              <ChevronRight className="ml-2 w-5 h-5" />
-            </Button>
+              <Button
+                className="px-10 py-7 text-lg font-semibold bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all"
+                size="lg"
+              >
+                Get Started
+                <ChevronRight className="ml-2 w-5 h-5" />
+              </Button>
+            </a>
             <a
               href="https://flow-index-f7fdedcf.vercel.app/"
               target="_blank"
@@ -613,7 +619,7 @@ export default function Index() {
                 className="px-10 py-7 text-lg font-semibold border-2 border-purple-400 text-gray-900 rounded-full hover:bg-purple-50 transition-all"
                 size="lg"
               >
-                Visit Website
+                Visit Main Website
               </Button>
             </a>
           </div>
@@ -621,7 +627,7 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="w-full bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+      <footer className="w-full bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8 animate-fade-in" style={{ animationDelay: "0.9s" }}>
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             {/* Brand */}
