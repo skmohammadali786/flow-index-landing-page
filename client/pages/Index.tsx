@@ -456,15 +456,16 @@ export default function Index() {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-gradient-to-br from-green-50 to-teal-50 hover:shadow-lg transition-all border border-green-200 hover:border-green-300 group"
+                className="p-6 rounded-2xl bg-gradient-to-br from-green-50 to-teal-50 hover:shadow-2xl hover:scale-105 transition-all border border-green-200 hover:border-green-400 group animate-bounce-in"
+                style={{ animationDelay: `${idx * 0.1}s` }}
               >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">
+                <h3 className="font-bold text-gray-900 mb-2 group-hover:text-green-700 transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-gray-700 text-sm">{feature.description}</p>
+                <p className="text-gray-700 text-sm group-hover:text-gray-900 transition-colors">{feature.description}</p>
               </div>
             ))}
           </div>
