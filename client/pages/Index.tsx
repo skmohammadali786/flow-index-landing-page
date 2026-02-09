@@ -111,9 +111,9 @@ export default function Index() {
 
                       {/* Calendar Grid */}
                       <div className="grid grid-cols-7 gap-1">
-                        {["S", "M", "T", "W", "T", "F", "S"].map((day) => (
+                        {["S", "M", "T", "W", "T", "F", "S"].map((day, idx) => (
                           <div
-                            key={day}
+                            key={`day-${idx}`}
                             className="w-7 h-6 flex items-center justify-center text-xs font-semibold text-gray-600"
                           >
                             {day}
@@ -137,7 +137,7 @@ export default function Index() {
 
                           return (
                             <div
-                              key={i}
+                              key={`cal-day-${day}`}
                               className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs font-semibold ${bgColor} ${
                                 day === 14 ? "ring-2 ring-pink-500" : ""
                               } text-gray-900 relative`}
