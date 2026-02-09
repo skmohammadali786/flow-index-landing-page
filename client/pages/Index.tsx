@@ -343,7 +343,7 @@ export default function Index() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-to-br from-brain to-purple-500">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500">
                       <Brain className="h-6 w-6 text-white" />
                     </div>
                   </div>
