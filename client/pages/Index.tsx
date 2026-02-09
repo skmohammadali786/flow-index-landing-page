@@ -605,23 +605,26 @@ export default function Index() {
               href="https://flow-index-f7fdedcf.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
+              className="transform hover:scale-110 transition-transform duration-300"
             >
               <Button
-                className="px-10 py-7 text-lg font-semibold bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all"
+                className="px-10 py-7 text-lg font-semibold bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white rounded-full shadow-lg hover:shadow-2xl hover:shadow-pink-400/50 transition-all duration-300 animate-bounce-in"
                 size="lg"
               >
                 Get Started
-                <ChevronRight className="ml-2 w-5 h-5" />
+                <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
             <a
               href="https://flow-index-f7fdedcf.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
+              className="transform hover:scale-110 transition-transform duration-300"
             >
               <Button
                 variant="outline"
-                className="px-10 py-7 text-lg font-semibold border-2 border-purple-400 text-gray-900 rounded-full hover:bg-purple-50 transition-all"
+                className="px-10 py-7 text-lg font-semibold border-2 border-purple-400 text-gray-900 rounded-full hover:bg-purple-50 hover:border-purple-600 transition-all duration-300 animate-bounce-in"
+                style={{ animationDelay: "0.1s" }}
                 size="lg"
               >
                 Visit Main Website
