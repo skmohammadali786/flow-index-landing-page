@@ -443,7 +443,7 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ${clinicalRef.isVisible ? "opacity-100" : "opacity-0"}`}>
             {[
               {
                 icon: Shield,
@@ -468,8 +468,8 @@ export default function Index() {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-gradient-to-br from-green-50 to-teal-50 hover:shadow-2xl hover:scale-105 transition-all border border-green-200 hover:border-green-400 group animate-bounce-in"
-                style={{ animationDelay: `${idx * 0.1}s` }}
+                className={`p-6 rounded-2xl bg-gradient-to-br from-green-50 to-teal-50 hover:shadow-2xl hover:scale-105 transition-all border border-green-200 hover:border-green-400 group ${clinicalRef.isVisible ? "animate-bounce-in" : "opacity-0"}`}
+                style={{ animationDelay: clinicalRef.isVisible ? `${idx * 0.1}s` : undefined }}
               >
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
