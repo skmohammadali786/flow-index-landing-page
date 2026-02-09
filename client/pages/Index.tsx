@@ -38,17 +38,23 @@ export default function Index() {
                 </span>
               </h1>
               <p className="text-xl sm:text-2xl text-gray-700 font-light">
-                Know your rhythm. Feel in control.
+                Know your Rhythm. Feel in control.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                className="px-8 py-6 text-lg font-semibold bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all"
-                size="lg"
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+              <a
+                href="https://flow-index-f7fdedcf.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Start Tracking
-              </Button>
+                <Button
+                  className="px-8 py-6 text-lg font-semibold bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all"
+                  size="lg"
+                >
+                  Start Tracking
+                </Button>
+              </a>
               <a
                 href="https://flow-index-f7fdedcf.vercel.app/"
                 target="_blank"
@@ -64,7 +70,7 @@ export default function Index() {
               </a>
             </div>
 
-            <div className="flex items-center gap-6 text-sm text-gray-600 pt-4">
+            <div className="flex items-center gap-6 text-sm text-gray-600 pt-4 animate-fade-in" style={{ animationDelay: "0.6s" }}>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-pink-500" />
                 <span>HIPAA Compliant</span>
