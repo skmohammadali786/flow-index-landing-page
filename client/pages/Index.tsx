@@ -306,7 +306,7 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 ${smartInsightsRef.isVisible ? "opacity-100" : "opacity-0"}`}>
             {[
               {
                 icon: BarChart3,
@@ -329,8 +329,8 @@ export default function Index() {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-2xl bg-gradient-to-br from-lavender/20 to-transparent border-2 border-purple-200 hover:border-purple-400 hover:shadow-2xl hover:scale-105 transition-all group animate-bounce-in"
-                style={{ animationDelay: `${idx * 0.15}s` }}
+                className={`p-8 rounded-2xl bg-gradient-to-br from-lavender/20 to-transparent border-2 border-purple-200 hover:border-purple-400 hover:shadow-2xl hover:scale-105 transition-all group ${smartInsightsRef.isVisible ? "animate-bounce-in" : "opacity-0"}`}
+                style={{ animationDelay: smartInsightsRef.isVisible ? `${idx * 0.15}s` : undefined }}
               >
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-400 to-blue-400 flex items-center justify-center mb-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300">
                   <feature.icon className="w-8 h-8 text-white" />
