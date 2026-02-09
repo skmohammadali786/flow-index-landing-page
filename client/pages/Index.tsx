@@ -593,7 +593,7 @@ export default function Index() {
 
       {/* Final CTA Section */}
       <section className="w-full py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100 animate-slide-up" style={{ animationDelay: "0.8s" }}>
-        <div className="container mx-auto text-center">
+        <div className="container mx-auto text-center animate-slide-up" style={{ animationDelay: "0.9s" }}>
           <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-8">
             Start understanding your cycle today.
           </h2>
