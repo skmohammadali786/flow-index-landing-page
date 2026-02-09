@@ -432,7 +432,7 @@ export default function Index() {
       </section>
 
       {/* Clinical-Grade Support */}
-      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white animate-slide-up" style={{ animationDelay: "0.5s" }}>
+      <section ref={clinicalRef.ref} className={`w-full py-20 px-4 sm:px-6 lg:px-8 bg-white ${clinicalRef.isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: "0.5s" }}>
         <div className="container mx-auto">
           <div className="text-center mb-16 animate-slide-up" style={{ animationDelay: "0.6s" }}>
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
