@@ -253,7 +253,7 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ${healthWellnessRef.isVisible ? "opacity-100" : "opacity-0"}`}>
             {[
               {
                 icon: Sparkles,
@@ -278,8 +278,8 @@ export default function Index() {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-white border-2 border-peach hover:border-pink-400 hover:shadow-2xl hover:scale-105 transition-all group animate-bounce-in"
-                style={{ animationDelay: `${idx * 0.1}s` }}
+                className={`p-6 rounded-2xl bg-white border-2 border-peach hover:border-pink-400 hover:shadow-2xl hover:scale-105 transition-all group ${healthWellnessRef.isVisible ? "animate-bounce-in" : "opacity-0"}`}
+                style={{ animationDelay: healthWellnessRef.isVisible ? `${idx * 0.1}s` : undefined }}
               >
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-peach to-pink-300 flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
