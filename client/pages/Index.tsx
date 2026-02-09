@@ -17,6 +17,10 @@ import {
   Sparkles,
   CheckCircle2,
   ChevronRight,
+  User,
+  Settings,
+  ChevronLeft,
+  Clock,
 } from "lucide-react";
 
 export default function Index() {
@@ -112,9 +116,9 @@ export default function Index() {
               {/* Phone Frame */}
               <div className="relative mx-auto w-72 h-96 bg-black rounded-3xl shadow-2xl overflow-hidden border-8 border-gray-900">
                 {/* Phone Screen */}
-                <div className="w-full h-full bg-gradient-to-b from-purple-50 to-pink-50 overflow-hidden">
+                <div className="w-full h-full bg-stone-50 overflow-hidden flex flex-col relative">
                   {/* Status Bar */}
-                  <div className="h-8 bg-white bg-opacity-50 flex items-center justify-between px-6 text-xs font-medium">
+                  <div className="h-8 bg-white/50 flex items-center justify-between px-6 text-xs font-medium z-10">
                     <span>9:41</span>
                     <div className="flex gap-1">
                       <div className="w-1 h-1 bg-gray-800 rounded-full"></div>
@@ -123,70 +127,138 @@ export default function Index() {
                   </div>
 
                   {/* App Content */}
-                  <div className="p-4 h-full overflow-hidden">
-                    <div className="space-y-4">
-                      {/* Header */}
-                      <div className="text-center">
-                        <h3 className="text-lg font-bold text-gray-900">
-                          February 2024
-                        </h3>
-                        <p className="text-xs text-gray-600">Cycle Day 14</p>
+                  <div className="h-full flex flex-col">
+                    {/* Top Bar */}
+                    <div className="pt-2 px-4 pb-4 flex justify-between items-center">
+                      <h1 className="text-lg font-serif font-bold text-red-800/80">
+                        Flow Index
+                      </h1>
+                      <div className="flex gap-3">
+                        <User className="w-4 h-4 text-gray-400" />
+                        <Settings className="w-4 h-4 text-gray-400" />
                       </div>
+                    </div>
 
-                      {/* Calendar Grid */}
-                      <div className="grid grid-cols-7 gap-1">
-                        {["S", "M", "T", "W", "T", "F", "S"].map((day, idx) => (
-                          <div
-                            key={`day-${idx}`}
-                            className="w-7 h-6 flex items-center justify-center text-xs font-semibold text-gray-600"
-                          >
-                            {day}
+                    {/* Nav Icons */}
+                    <div className="flex justify-between px-5 pb-4 border-b border-stone-100">
+                      <div className="p-1.5 bg-white rounded-xl shadow-sm border border-stone-100">
+                        <Calendar className="w-4 h-4 text-gray-700" />
+                      </div>
+                      <TrendingUp className="w-4 h-4 text-gray-400" />
+                      <BarChart3 className="w-4 h-4 text-gray-400" />
+                      <Activity className="w-4 h-4 text-gray-400" />
+                      <Heart className="w-4 h-4 text-gray-400" />
+                      <Clock className="w-4 h-4 text-gray-400" />
+                    </div>
+
+                    {/* Calendar Card */}
+                    <div className="flex-1 px-4 pt-4">
+                      <div className="bg-white rounded-3xl p-4 shadow-sm pb-8">
+                        {/* Month Header */}
+                        <div className="flex justify-between items-center mb-4 px-2">
+                          <ChevronLeft className="w-4 h-4 text-gray-400" />
+                          <h2 className="text-base font-serif font-bold text-gray-800">
+                            February 2026
+                          </h2>
+                          <ChevronRight className="w-4 h-4 text-gray-400" />
+                        </div>
+
+                        {/* Days Header */}
+                        <div className="grid grid-cols-7 mb-3">
+                          {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(
+                            (day) => (
+                              <div
+                                key={day}
+                                className="text-center text-[10px] text-gray-400 font-medium"
+                              >
+                                {day}
+                              </div>
+                            ),
+                          )}
+                        </div>
+
+                        {/* Calendar Grid */}
+                        <div className="grid grid-cols-7 gap-y-3 gap-x-1 mb-6">
+                          {Array.from({ length: 28 }, (_, i) => i + 1).map(
+                            (day) => {
+                              let content = (
+                                <span className="text-xs text-gray-600 font-medium">
+                                  {day}
+                                </span>
+                              );
+                              let className =
+                                "h-7 w-7 mx-auto flex items-center justify-center rounded-full relative";
+
+                              if (day === 8 || day === 9) {
+                                className +=
+                                  " bg-red-400 text-white shadow-md shadow-red-200";
+                                content = (
+                                  <>
+                                    <span className="text-[10px] font-bold z-10 mb-1">
+                                      {day}
+                                    </span>
+                                    <div className="absolute bottom-1 flex items-center justify-center w-full">
+                                      <Droplet
+                                        className="w-2.5 h-2.5 text-white/50"
+                                        fill="currentColor"
+                                      />
+                                    </div>
+                                    <div className="absolute bottom-0 right-0 w-1.5 h-1.5 bg-green-400 rounded-full border border-white"></div>
+                                  </>
+                                );
+                              } else if (day === 7) {
+                                className += " bg-red-50 text-red-400";
+                                content = (
+                                  <span className="text-xs font-medium">?</span>
+                                );
+                              } else if (day >= 24 && day <= 28) {
+                                className += " bg-purple-100 text-purple-700";
+                              }
+
+                              return (
+                                <div key={day} className={className}>
+                                  {content}
+                                </div>
+                              );
+                            },
+                          )}
+                        </div>
+
+                        {/* Legend */}
+                        <div className="flex flex-wrap gap-x-3 gap-y-2 px-1 justify-center">
+                          <div className="flex items-center gap-1.5">
+                            <div className="w-2 h-2 rounded-sm bg-red-400"></div>
+                            <span className="text-[9px] text-gray-500 font-medium">
+                              Period
+                            </span>
                           </div>
-                        ))}
-                        {Array.from({ length: 29 }).map((_, i) => {
-                          const day = i + 1;
-                          let bgColor = "bg-gray-50";
-                          let dot = null;
-
-                          if (day >= 1 && day <= 5) bgColor = "bg-red-200";
-                          else if (day >= 6 && day <= 13)
-                            bgColor = "bg-purple-100";
-                          else if (day >= 14 && day <= 16)
-                            bgColor = "bg-pink-300";
-                          else if (day >= 17 && day <= 27)
-                            bgColor = "bg-blue-100";
-
-                          if (day === 14) dot = "white";
-
-                          return (
-                            <div
-                              key={`cal-day-${day}`}
-                              className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs font-semibold ${bgColor} ${
-                                day === 14 ? "ring-2 ring-pink-500" : ""
-                              } text-gray-900 relative`}
-                            >
-                              {day}
-                              {dot && (
-                                <div className="absolute bottom-0.5 w-1 h-1 bg-white rounded-full"></div>
-                              )}
-                            </div>
-                          );
-                        })}
-                      </div>
-
-                      {/* Stats */}
-                      <div className="space-y-2 text-xs">
-                        <div className="flex items-center justify-between text-gray-700">
-                          <span>Ovulation: 6 days</span>
-                          <span className="text-pink-500 font-semibold">
-                            📍
-                          </span>
-                        </div>
-                        <div className="flex items-center justify-between text-gray-700">
-                          <span>Avg Cycle: 28d</span>
-                          <span className="text-purple-500">📊</span>
+                          <div className="flex items-center gap-1.5">
+                            <div className="w-2 h-2 rounded-sm border border-dashed border-red-400"></div>
+                            <span className="text-[9px] text-gray-500 font-medium">
+                              Predicted
+                            </span>
+                          </div>
+                          <div className="flex items-center gap-1.5">
+                            <div className="w-2 h-2 rounded-sm bg-purple-200"></div>
+                            <span className="text-[9px] text-gray-500 font-medium">
+                              Fertile
+                            </span>
+                          </div>
+                          <div className="flex items-center gap-1.5">
+                            <div className="w-2 h-2 rounded-sm bg-purple-400"></div>
+                            <span className="text-[9px] text-gray-500 font-medium">
+                              Ovulation
+                            </span>
+                          </div>
                         </div>
                       </div>
+                    </div>
+
+                    {/* FAB */}
+                    <div className="absolute bottom-4 right-4">
+                      <button className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center shadow-lg shadow-red-200 text-white hover:bg-red-600 transition-colors">
+                        <Droplet className="w-5 h-5 fill-current" />
+                      </button>
                     </div>
                   </div>
                 </div>
