@@ -165,16 +165,22 @@ export default function Index() {
 
                         {/* Days Header */}
                         <div className="grid grid-cols-7 mb-3">
-                          {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(
-                            (day) => (
-                              <div
-                                key={day}
-                                className="text-center text-[10px] text-gray-400 font-medium"
-                              >
-                                {day}
-                              </div>
-                            ),
-                          )}
+                          {[
+                            "Sun",
+                            "Mon",
+                            "Tue",
+                            "Wed",
+                            "Thu",
+                            "Fri",
+                            "Sat",
+                          ].map((day) => (
+                            <div
+                              key={day}
+                              className="text-center text-[10px] text-gray-400 font-medium"
+                            >
+                              {day}
+                            </div>
+                          ))}
                         </div>
 
                         {/* Calendar Grid */}
